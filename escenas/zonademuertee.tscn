@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://uh77ayqo1d55"]
+
+[ext_resource type="Script" uid="uid://b212i4h4qg7lu" path="res://Scripts/zonademuertee.gd" id="1_gu3pu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(797, 20)
+
+[node name="zonademuertee" type="Area2D" unique_id=329034605 groups=["Player"]]
+scale = Vector2(31.039997, 3)
+script = ExtResource("1_gu3pu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=883774360 groups=["Player"]]
+position = Vector2(388.5, 0)
+shape = SubResource("RectangleShape2D_bhunq")
+debug_color = Color(0.88235295, 0.10980392, 0.08235294, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
